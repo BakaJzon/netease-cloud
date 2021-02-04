@@ -25,4 +25,6 @@ jobs:
           python-version: '3.x'
     
       - name: netease
-        run:  python main.py
+        run:  |
+          pip install -r requirements.txt
+          python main.py
