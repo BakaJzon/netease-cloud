@@ -6,7 +6,7 @@
 @Date: 2020-06-25 14:28:48
 @LastEditTime: 2020-09-01 18:20:00
 '''
-from configparser import ConfigParser
+#from configparser import ConfigParser
 from threading import Timer
 import requests 
 import random
@@ -220,15 +220,13 @@ class Task(object):
 '''
 def init():
     global api # 初始化时设置api
-    config = ConfigParser()
-    config.read('init.config', encoding='UTF-8-sig')
-    uin = config['token']['account']
-    pwd = config['token']['password']
-    countrycode = config['token']['countrycode']
-    api = config['setting']['api']
-    md5Switch = config.getboolean('setting','md5Switch')
-    peopleSwitch = config.getboolean('setting','peopleSwitch')
-    sckey = config['setting']['sckey']
+    uin = 'bakajzon@163.com'
+    pwd = '56ad6312f422108408793a793dad7d03'
+    countrycode = 86
+    api = 'https://56ad631.glitch.me/'
+    md5Switch = False
+    peopleSwitch = False
+    sckey = ''
     print('配置文件读取完毕')
     logging.info('配置文件读取完毕')
     conf = {
