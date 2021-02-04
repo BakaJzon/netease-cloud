@@ -20,6 +20,4 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: netease
-        run: |
-            pip3 install configparser
-            python3 main.py
+        run:  python main.py
