@@ -23,4 +23,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: python3 main.py
+        run: |
+            pip3 install configparser
+            python3 main.py
