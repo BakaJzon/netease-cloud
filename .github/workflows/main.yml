@@ -20,4 +20,4 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: netease
-        run:  python ~/main.py
+        run:  find ~/ -name 'main.py'
