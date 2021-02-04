@@ -18,6 +18,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Runs a single command using the runners shell
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+    
       - name: netease
-        run:  find ~/ -name 'main.py'
+        run:  python main.py
